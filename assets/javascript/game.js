@@ -8,17 +8,17 @@ let guessesLeft = 10;
 let guessesMade = [];
 let userGuess = null;
 
+//This will get the program to choose a random letter from the array above
+let compChoice = randomLetter[Math.floor(Math.random() * randomLetter.length)];
+
+console.log(compChoice);
+
 // Function to restart the stats
 let restart = function(){
     guessesLeft = 10;
     guessesMade = [];
     compChoice = randomLetter[Math.floor(Math.random() * randomLetter.length)];
 }
-
-//This will get the program to choose a random letter from the array above
-let compChoice = randomLetter[Math.floor(Math.random() * randomLetter.length)];
-
-console.log(compChoice);
 
 //function for key presses
 document.onkeyup = function () {
@@ -36,7 +36,7 @@ console.log("The player guessed " + userGuess);
         wins++;
         console.log("The user has won " + wins + " times.");
 
-        //reset numGuesses count to 9
+        //reset numGuesses count to 10
         guessesLeft = 10;
 
         restart();
@@ -51,13 +51,19 @@ console.log("The player guessed " + userGuess);
         guessesLeft--;
         console.log(guessesMade);
         console.log(guessesLeft);
+
+        //Player's key choice is displayed
         document.querySelector("#playerGuesses").innerHTML += userGuess + " ";
         console.log("the user has guessed a total of " + guessesMade + " times.");
             if (guessesLeft == 0){
                 losses++;
-                guessesLeft=10;
+                guessesLeft=9;
                 userGuess = null;
                 document.querySelector("#playerGuesses").innerHTML = userGuess;
             }
     }
+
+    document.querySelector("#numWins").innerHTML = wins;
+    document.querySelector("#numLosses").innerHTML = losses;
+    document.querySelector("#guessesLeft").innerHTML = guessesLeft;
 }
