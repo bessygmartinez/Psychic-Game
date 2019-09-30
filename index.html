@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>The Psychic Game</title>
+</head>
+<body class="m-0 p-0">
+    <div class="container-fluid bg-light">
+        <div class="row m-0 p-0">
+                <div class="jumbotron jumbotron-fluid mx-auto py-3">
+                        <div class="container text-sm-center">
+                          <h1 class="display-4">Take A Guess</h1>
+                          <img src="https://media.giphy.com/media/26DOs997h6fgsCthu/giphy.gif" class="img-fluid">
+                          <p class="lead">Guess what letter I'm thinking of.</p>
+                        </div>
+                      </div>
+        </div>
+        
+        <div class ="row">
+            <div class="col-sm text-sm-center">
+                <h2 class="display-4">Wins: <span id="numWins"></span></h2>
+            </div>
+            <div class="col-sm text-sm-center">
+                <h2 class="display-4">Losses: <span id="numLosses"></span></h2>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="container">
+                <h2 class="lead">Guesses left this round: <span id="numGuesses"></span></h2>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="container">
+                <h2 class="lead">Your guesses this round: <span id="playerGuesses"></span></h2>
+            </div>
+        </div>
+    </div>
+
+
+
+<script src="assets/javascript/game.js"></script>
+</body>
+
+</html>
