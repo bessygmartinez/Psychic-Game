@@ -17,11 +17,11 @@ let userGuess = null;
 document.onkeyup = function () {
 
     //Player presses key, key stroke is stored to this variable
-    var playerGuess = String.fromCharCode(event.keyCode).toLowerCase();
+    var playerKey = String.fromCharCode(event.keyCode).toLowerCase();
     console.log("The user guessed " + userGuess);
 
     //Player's guess is compared to computer's choice
-    if (playerGuess == compChoice) {
+    if (playerKey == compChoice) {
         console.log("same");
 
         //win count
@@ -30,5 +30,12 @@ document.onkeyup = function () {
 
         //reset numGuesses count to 9
         numGuesses = 9;
+    }
+
+    else {
+        console.log("different");
+        playerGuesses++;
+        numGuesses--;
+        document.querySelector("#guessesMade").innerHTML = userGuess;
     }
 }
