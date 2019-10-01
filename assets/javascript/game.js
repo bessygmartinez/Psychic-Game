@@ -17,6 +17,8 @@ console.log(compChoice);
 let restart = function(){
     guessesLeft = 10;
     guessesMade = [];
+    userGuess = null;
+    document.querySelector("#playerGuesses").innerHTML = userGuess;
     compChoice = randomLetter[Math.floor(Math.random() * randomLetter.length)];
 }
 
@@ -35,9 +37,6 @@ console.log("The player guessed " + userGuess);
         //win count
         wins++;
         console.log("The user has won " + wins + " times.");
-
-        //reset numGuesses count to 10
-        guessesLeft = 10;
 
         restart();
 
