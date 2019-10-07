@@ -14,3 +14,5 @@ In order to please me, you will do the following:
     1.  If the letter does not match the one I am thinking of, it will be recorded under "Your guesses this round."
 1.  You will have 10 chances to guess the letter I am thinking of.
 1.  If your 10 chances expire, a point to the Loss column will be recorded. A new round will begin and I will think of a new letter for you to guess.
+
+# Click [here](https://bessygmartinez.github.io/Psychic-Game/) to play!
